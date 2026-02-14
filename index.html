@@ -489,7 +489,7 @@
             scrollbar-width: thin;
             scrollbar-color: var(--dusty-rose) var(--alabaster);
             flex: 1;
-            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: touch; /* added for smooth mobile scroll like events */
         }
 
         .scrollable-collection::-webkit-scrollbar {
@@ -761,6 +761,11 @@
         }
 
         @media (max-width: 768px) {
+            /* Hide logo on mobile – only vineyard remains */
+            .logo {
+                display: none !important;
+            }
+
             .mobile-menu-btn {
                 display: block !important;
             }
@@ -1062,18 +1067,18 @@
         </div>
     </section>
 
-    <!-- OUR STORY -->
+    <!-- OUR STORY – UPDATED with new text and "A Dream That Refused to End" -->
     <section id="about" class="container">
         <div class="section-title">
             <h2>Our Story</h2>
-            <p>Born from the legacy of Infiniti by Faith, a journey of fine dining and local craftsmanship</p>
+            <!-- old subheading removed as requested -->
         </div>
         <div class="about-content">
-            <p>INFINITI Wines carries forward the legacy of Infiniti by Faith, where our passion for fine dining and local craftsmanship has been poured into every bottle. We are the 'baby' of this cherished journey, bringing the same devotion to South African soil and winemaking artistry.</p>
-            <div class="about-highlight">
-                Our crowning jewel. Crafted using the traditional method and aged on the lees to develop a depth that mirrors our journey of faith. This is for the moments that deserve to be paused.
-            </div>
-            <p>While we highlight our signature blends here, the INFINITI cellar is home to ten distinct varietals, each crafted with the same devotion to the South African soil. From crisp whites to bold, structural reds, our full portfolio is available for private acquisition and hospitality partnerships.</p>
+            <h3 style="font-size: 2rem; font-style: italic; color: #8f6b4f; margin-bottom: 1.5rem;">A Dream That Refused to End</h3>
+            <p>INFINITI Wines was born from a dream that refused to end, much like the name itself. In the heart of Helshoogte Valley, Stellenbosch, where vineyards roll over sun-kissed hills, we found the perfect place to craft something truly ours.</p>
+            <p>Every grape is handpicked with care, carrying the warmth of the African sun and the spirit of our land. But INFINITI Wines is more than just wine – it is a celebration of life's endless moments.</p>
+            <p>We believe that wine is not only for special occasions, but for the everyday memories that shape us: the laughter of friends, the quiet comfort in tough times, the clink of glasses in celebration.</p>
+            <p>This is not just another wine on the shelf. It is a promise that no glass should ever stand empty, that connections should be nurtured, and that we must always make space to celebrate – big or small.</p>
         </div>
     </section>
 
@@ -1088,10 +1093,14 @@
                     <p>Prestigious, Artisanal, Timeless South African wines born from the legacy of Infiniti by Faith.</p>
                     <p>MADE IN SOUTH AFRICA</p>
                     <div class="social-icons">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        
-                    </div>
+    <a href="https://www.instagram.com/infinitiwines?utm_source=qr&igsh=MWx1NW8xb21rZThqcg==" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
                 </div>
                 <div class="footer-column">
                     <h3>Contact</h3>
