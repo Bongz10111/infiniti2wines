@@ -490,9 +490,8 @@
             scrollbar-color: var(--dusty-rose) var(--alabaster);
             flex: 1;
             -webkit-overflow-scrolling: touch; /* essential for smooth mobile scroll */
-            width: 100%; /* ensure it takes full width */
+            width: 100%;
             max-width: 100%;
-            /* ensure no hidden overflow */
             overscroll-behavior-x: contain;
         }
 
@@ -592,7 +591,7 @@
 
         .event-scroll-wrapper {
             width: 100%;
-            overflow: hidden; /* container just for alignment, actual scroll on inner div */
+            overflow: hidden;
         }
 
         .scrollable-events {
@@ -621,7 +620,7 @@
         }
 
         .event-image-card {
-            flex: 0 0 320px; /* fixed width, all image */
+            flex: 0 0 320px;
             height: 380px;
             background-size: cover;
             background-position: center;
@@ -636,8 +635,6 @@
             transform: translateY(-6px);
             box-shadow: var(--shadow-md);
         }
-
-        /* no text, no overlay, just pure image */
 
         /* ----- SERVICES grid (responsive) ----- */
         .services-grid {
@@ -737,6 +734,7 @@
             font-size: 13px;
         }
 
+        /* ----- RESPONSIVE MEDIA QUERIES (FIXED & CLEANED) ----- */
         @media (max-width: 1024px) {
             .nav-links {
                 gap: 20px;
@@ -765,15 +763,16 @@
         }
 
         @media (max-width: 768px) {
-            /* Hide logo on mobile – only vineyard remains */
-            .logo {
-                display: none !important;
+            /* EXACT USER REQUESTED SNIPPET */
+            .hero {
+                background-image: url('assets/hero-mobile.jpg');
+                background-size: cover;
+                background-position: center;
             }
+            .logo { display: none !important; } /* hides the logo */
+            .mobile-menu-btn { display: block !important; }
 
-            .mobile-menu-btn {
-                display: block !important;
-            }
-
+            /* ALL OTHER MOBILE STYLES (PRESERVED) */
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -878,9 +877,8 @@
                 height: 340px;
             }
 
-            /* ensure wine scroll container works on mobile */
             .scrollable-collection {
-                gap: 30px; /* smaller gap on mobile for better fit */
+                gap: 30px;
                 -webkit-overflow-scrolling: touch;
                 overflow-x: auto;
                 width: 100%;
@@ -891,17 +889,21 @@
             .stable-signature-card {
                 padding: 25px 20px;
             }
+
             .wine-img-placeholder {
                 height: 250px;
             }
+
             .scrollable-card {
                 flex: 0 0 260px;
                 padding: 25px 20px;
             }
+
             .event-image-card {
                 flex: 0 0 260px;
                 height: 320px;
             }
+
             .scrollable-collection {
                 gap: 20px;
             }
@@ -942,7 +944,7 @@
         </div>
     </section>
 
-    <!-- THE COLLECTION (stable + scrollable) – NOW WITH PROPER MOBILE SCROLL -->
+    <!-- THE COLLECTION (stable + scrollable) -->
     <section id="wines" class="container">
         <div class="section-title">
             <h2>The Collection</h2>
@@ -1029,15 +1031,13 @@
         </p>
     </section>
 
-    <!-- ===== EVENTS & FUNCTIONS – HORIZONTAL SCROLL, ONLY IMAGES ===== -->
+    <!-- EVENTS & FUNCTIONS – HORIZONTAL SCROLL, ONLY IMAGES -->
     <section class="event-scroll-section">
         <div class="container">
             <div class="section-title">
                 <h2>Events & Functions</h2>
-                <!-- subtitle intentionally omitted – only images -->
             </div>
 
-            <!-- dedicated arrows for events -->
             <div class="event-scroll-arrows">
                 <button class="event-arrow-btn" id="eventScrollLeftBtn" aria-label="Scroll events left"><i class="fas fa-chevron-left"></i></button>
                 <button class="event-arrow-btn" id="eventScrollRightBtn" aria-label="Scroll events right"><i class="fas fa-chevron-right"></i></button>
@@ -1045,13 +1045,11 @@
 
             <div class="event-scroll-wrapper">
                 <div class="scrollable-events" id="eventScrollContainer">
-                    <!-- pure image cards – no text, no titles, no descriptions -->
                     <div class="event-image-card" style="background-image: url('assets/wine10.jpg');"></div>
                     <div class="event-image-card" style="background-image: url('assets/wine12.jpg');"></div>
                     <div class="event-image-card" style="background-image: url('assets/wine13.jpeg');"></div>
                     <div class="event-image-card" style="background-image: url('assets/wine8.jpg');"></div>
                     <div class="event-image-card" style="background-image: url('assets/wine9.jpg');"></div>
-                    
                 </div>
             </div>
         </div>
@@ -1082,11 +1080,10 @@
         </div>
     </section>
 
-    <!-- OUR STORY – UPDATED with new text and "A Dream That Refused to End" -->
+    <!-- OUR STORY – UPDATED -->
     <section id="about" class="container">
         <div class="section-title">
             <h2>Our Story</h2>
-            <!-- old subheading removed as requested -->
         </div>
         <div class="about-content">
             <h3 style="font-size: 2rem; font-style: italic; color: #8f6b4f; margin-bottom: 1.5rem;">A Dream That Refused to End</h3>
@@ -1110,7 +1107,6 @@
                     <div class="social-icons">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1146,7 +1142,6 @@
                 else header.classList.remove('scrolled');
             });
 
-            // ----- HAMBURGER -----
             const mobileBtn = document.getElementById('mobileMenuBtn');
             const navLinks = document.getElementById('navLinks');
             const body = document.body;
@@ -1198,7 +1193,6 @@
                 }
             });
 
-            // ----- SMOOTH SCROLL -----
             document.querySelectorAll('a[href^="#"]:not(.nav-link)').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1209,7 +1203,6 @@
                 });
             });
 
-            // ----- WINE SCROLL ARROWS -----
             const wineScroll = document.getElementById('wineScrollContainer');
             const wineLeft = document.getElementById('scrollLeftBtn');
             const wineRight = document.getElementById('scrollRightBtn');
@@ -1218,17 +1211,15 @@
                 wineLeft.addEventListener('click', () => wineScroll.scrollBy({ left: -340, behavior: 'smooth' }));
             }
 
-            // ----- EVENT SCROLL ARROWS (PURE IMAGE SCROLL) -----
             const eventScroll = document.getElementById('eventScrollContainer');
             const eventLeft = document.getElementById('eventScrollLeftBtn');
             const eventRight = document.getElementById('eventScrollRightBtn');
             if (eventScroll && eventLeft && eventRight) {
-                const scrollStep = 360; // matches card width + gap
+                const scrollStep = 360;
                 eventRight.addEventListener('click', () => eventScroll.scrollBy({ left: scrollStep, behavior: 'smooth' }));
                 eventLeft.addEventListener('click', () => eventScroll.scrollBy({ left: -scrollStep, behavior: 'smooth' }));
             }
 
-            // ----- WHATSAPP INQUIRY -----
             document.querySelectorAll('.btn-inquire').forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
