@@ -913,90 +913,108 @@
 
     <!-- THE COLLECTION (stable + scrollable) -->
     <section id="wines" class="container">
-        <div class="section-title">
-            <h2>The Collection</h2>
-            <p>Signature blends crafted with devotion to Stellenbosch terroir and winemaking artistry</p>
+    <div class="section-title">
+        <h2>The Collection</h2>
+        <p>Signature blends crafted with devotion to Stellenbosch terroir and winemaking artistry</p>
+    </div>
+
+    <div class="scroll-arrows">
+        <button class="arrow-btn" id="scrollLeftBtn" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+        <button class="arrow-btn" id="scrollRightBtn" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="collection-scroll-wrapper">
+        <div class="stable-signature-card">
+            <div class="signature-ribbon">
+                <i class="fas fa-crown"></i> SIGNATURE
+            </div>
+            <div class="wine-img-placeholder" style="background-image: url('assets/chocolateMerlot.jpg');"></div>
+            <h3 class="wine-name">Chocolate Merlot</h3>
+            <div class="wine-tags">
+                <span class="wine-tag">Indulgent</span>
+                <span class="wine-tag">Velvet</span>
+                <span class="wine-tag">Revolutionary</span>
+            </div>
+            <p class="wine-description">A masterful marriage of the classic Stellenbosch Merlot grape with the luxurious essence of dark cocoa. Silky black cherry with a velvet dark chocolate finish.</p>
+            <p class="wine-pairing">Pair with aged Gouda & artisanal truffles.</p>
+            <a href="https://wa.me/27711256318?text=Hello%20INFINITI%20WINES%2C%20I%27m%20interested%20in%20Chocolate%20Merlot." 
+               target="_blank" class="btn-inquire">
+                <i class="fab fa-whatsapp"></i> Inquire
+            </a>
         </div>
 
-        <div class="scroll-arrows">
-            <button class="arrow-btn" id="scrollLeftBtn" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
-            <button class="arrow-btn" id="scrollRightBtn" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
-        </div>
-
-        <div class="collection-scroll-wrapper">
-            <div class="stable-signature-card">
-                <div class="signature-ribbon">
-                    <i class="fas fa-crown"></i> SIGNATURE
-                </div>
-                <div class="wine-img-placeholder" style="background-image: url('assets/chocolateMerlot.jpg');"></div>
-                <h3 class="wine-name">Chocolate Merlot</h3>
+        <div class="scrollable-collection" id="wineScrollContainer">
+            <div class="scrollable-card">
+                <div class="wine-img-placeholder" style="background-image: url('assets/shiraz.jpg');"></div>
+                <h3 class="wine-name">Shiraz</h3>
                 <div class="wine-tags">
-                    <span class="wine-tag">Indulgent</span>
-                    <span class="wine-tag">Velvet</span>
-                    <span class="wine-tag">Revolutionary</span>
+                    <span class="wine-tag">Sophisticated</span>
+                    <span class="wine-tag">Bold</span>
+                    <span class="wine-tag">Timeless</span>
                 </div>
-                <p class="wine-description">A masterful marriage of the classic Stellenbosch Merlot grape with the luxurious essence of dark cocoa. Silky black cherry with a velvet dark chocolate finish.</p>
-                <p class="wine-pairing">Pair with aged Gouda & artisanal truffles.</p>
-                <button class="btn-inquire">
+                <p class="wine-description">Tribute to South African heritage, refined for the modern palate. Elegant tannins, balanced warmth.</p>
+                <p class="wine-pairing">Slow-cooked lamb or deep laughter.</p>
+                <a href="https://wa.me/27711256318?text=Hello%20INFINITI%20WINES%2C%20I%27m%20interested%20in%20Shiraz." 
+                   target="_blank" class="btn-inquire">
                     <i class="fab fa-whatsapp"></i> Inquire
-                </button>
+                </a>
             </div>
 
-            <div class="scrollable-collection" id="wineScrollContainer">
-                <div class="scrollable-card">
-                    <div class="wine-img-placeholder" style="background-image: url('assets/shiraz.jpg');"></div>
-                    <h3 class="wine-name">Shiraz</h3>
-                    <div class="wine-tags">
-                        <span class="wine-tag">Sophisticated</span>
-                        <span class="wine-tag">Bold</span>
-                        <span class="wine-tag">Timeless</span>
-                    </div>
-                    <p class="wine-description">Tribute to South African heritage, refined for the modern palate. Elegant tannins, balanced warmth.</p>
-                    <p class="wine-pairing">Slow-cooked lamb or deep laughter.</p>
-                    <button class="btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</button>
+            <div class="scrollable-card">
+                <div class="wine-img-placeholder" style="background-image: url('assets/chardoney.jpg');"></div>
+                <h3 class="wine-name">Chardonnay</h3>
+                <div class="wine-tags">
+                    <span class="wine-tag">Luminous</span>
+                    <span class="wine-tag">Golden</span>
+                    <span class="wine-tag">Elegant</span>
                 </div>
-                <div class="scrollable-card">
-                    <div class="wine-img-placeholder" style="background-image: url('assets/chardoney.jpg');"></div>
-                    <h3 class="wine-name">Chardonnay</h3>
-                    <div class="wine-tags">
-                        <span class="wine-tag">Luminous</span>
-                        <span class="wine-tag">Golden</span>
-                        <span class="wine-tag">Elegant</span>
-                    </div>
-                    <p class="wine-description">Helshoogte Valley's cool breezes captured in golden elegance. Sun-ripened fruit with polished finish.</p>
-                    <p class="wine-pairing">Creamy pastas, roasted poultry, sunset.</p>
-                    <button class="btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</button>
+                <p class="wine-description">Helshoogte Valley's cool breezes captured in golden elegance. Sun-ripened fruit with polished finish.</p>
+                <p class="wine-pairing">Creamy pastas, roasted poultry, sunset.</p>
+                <a href="https://wa.me/27711256318?text=Hello%20INFINITI%20WINES%2C%20I%27m%20interested%20in%20Chardonnay." 
+                   target="_blank" class="btn-inquire">
+                    <i class="fab fa-whatsapp"></i> Inquire
+                </a>
+            </div>
+
+            <div class="scrollable-card">
+                <div class="wine-img-placeholder" style="background-image: url('assets/brut.jpg');"></div>
+                <h3 class="wine-name">Rosé</h3>
+                <div class="wine-tags">
+                    <span class="wine-tag">Joyful</span>
+                    <span class="wine-tag">Sun-drenched</span>
+                    <span class="wine-tag">Harmonious</span>
                 </div>
-                <div class="scrollable-card">
-                    <div class="wine-img-placeholder" style="background-image: url('assets/brut.jpg');"></div>
-                    <h3 class="wine-name">Rosé</h3>
-                    <div class="wine-tags">
-                        <span class="wine-tag">Joyful</span>
-                        <span class="wine-tag">Sun-drenched</span>
-                        <span class="wine-tag">Harmonious</span>
-                    </div>
-                    <p class="wine-description">Blushing tribute to the African sunset. Delicate sweetness, never heavy — only harmonious.</p>
-                    <p class="wine-pairing">Spicy local dishes, fruit platters.</p>
-                    <button class="btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</button>
+                <p class="wine-description">Blushing tribute to the African sunset. Delicate sweetness, never heavy — only harmonious.</p>
+                <p class="wine-pairing">Spicy local dishes, fruit platters.</p>
+                <a href="https://wa.me/27711256318?text=Hello%20INFINITI%20WINES%2C%20I%27m%20interested%20in%20Ros%C3%A9." 
+                   target="_blank" class="btn-inquire">
+                    <i class="fab fa-whatsapp"></i> Inquire
+                </a>
+            </div>
+
+            <div class="scrollable-card">
+                <div class="wine-img-placeholder" style="background-image: url('assets/naturalsweetrose.jpg');"></div>
+                <h3 class="wine-name">Sauvignon</h3>
+                <div class="wine-tags">
+                    <span class="wine-tag">Structure</span>
+                    <span class="wine-tag">Blackcurrant</span>
+                    <span class="wine-tag">Legacy</span>
                 </div>
-                <div class="scrollable-card">
-                    <div class="wine-img-placeholder" style="background-image: url('assets/naturalsweetrose.jpg');"></div>
-                    <h3 class="wine-name">Sauvignon</h3>
-                    <div class="wine-tags">
-                        <span class="wine-tag">Structure</span>
-                        <span class="wine-tag">Blackcurrant</span>
-                        <span class="wine-tag">Legacy</span>
-                    </div>
-                    <p class="wine-description">Classic Stellenbosch power. Cassis, subtle oak, fine-grained tannins.</p>
-                    <p class="wine-pairing">Grass-fed beef, heritage celebrations.</p>
-                    <button class="btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</button>
-                </div>
+                <p class="wine-description">Classic Stellenbosch power. Cassis, subtle oak, fine-grained tannins.</p>
+                <p class="wine-pairing">Grass-fed beef, heritage celebrations.</p>
+                <a href="https://wa.me/27711256318?text=Hello%20INFINITI%20WINES%2C%20I%27m%20interested%20in%20Sauvignon." 
+                   target="_blank" class="btn-inquire">
+                    <i class="fab fa-whatsapp"></i> Inquire
+                </a>
             </div>
         </div>
-        <p style="text-align: center; font-style: italic; color: var(--soft-charcoal); margin-top: 5px; opacity: 0.8;">
-            <i class="fas fa-arrow-left"></i> swipe or use arrows · signature stays <i class="fas fa-arrow-right"></i>
-        </p>
-    </section>
+    </div>
+
+    <p style="text-align: center; font-style: italic; color: var(--soft-charcoal); margin-top: 5px; opacity: 0.8;">
+        <i class="fas fa-arrow-left"></i> swipe or use arrows <i class="fas fa-arrow-right"></i>
+    </p>
+</section>
+
 
     <!-- EVENTS & FUNCTIONS – HORIZONTAL SCROLL, ONLY IMAGES -->
     <section class="event-scroll-section">
